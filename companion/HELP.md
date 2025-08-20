@@ -1,3 +1,3 @@
-## Your module
+## Wordnik API
 
-Write some help for your users here!
+Get the Wordnik `Word of the day` and `Random Words`
