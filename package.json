@@ -16,7 +16,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/phillipivan/companion-module-wordnik-api.git"
+		"url": "git+https://github.com/bitfocus/companion-module-wordnik-api.git"
 	},
 	"engines": {
 		"node": "^22.17",

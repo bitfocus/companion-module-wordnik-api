@@ -5,8 +5,8 @@
 	"description": "Wordnik API",
 	"version": "0.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/phillipivan/companion-module-wordnik-api.git",
-	"bugs": "https://github.com/phillipivan/companion-module-wordnik-api/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-wordnik-api.git",
+	"bugs": "https://github.com/bitfocus/companion-module-wordnik-api/issues",
 	"maintainers": [
 		{
 			"name": "Phillip Ivan Pietruschka"
