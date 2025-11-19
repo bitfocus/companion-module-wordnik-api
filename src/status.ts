@@ -1,6 +1,6 @@
 import { InstanceBase, InstanceStatus } from '@companion-module/base'
 import type { ModuleConfig } from './config.js'
-import { throttle } from 'lodash'
+import { throttle } from 'es-toolkit'
 
 export interface Status {
 	status: InstanceStatus
@@ -22,6 +22,7 @@ export class StatusManager {
 	#parentInstance!: InstanceBase<ModuleConfig>
 	#throttleTimeout: number = 2000
 	#isDestroyed: boolean = false
+	#controller = new AbortController()
 
 	constructor(
 		self: InstanceBase<ModuleConfig>,
@@ -80,7 +81,7 @@ export class StatusManager {
 			this.#currentStatus = newStatus
 		},
 		this.#throttleTimeout,
-		{ leading: true, trailing: true },
+		{ edges: ['leading', 'trailing'], signal: this.#controller.signal },
 	)
 
 	/**
@@ -90,7 +91,8 @@ export class StatusManager {
 
 	public destroy(): void {
 		this.setNewStatus.flush()
-		this.setNewStatus({ status: InstanceStatus.Disconnected, message: 'Destroyed' })
+		this.#parentInstance.updateStatus(InstanceStatus.Disconnected, 'Destroyed')
+		this.#controller.abort()
 		this.#isDestroyed = true
 	}
 }
