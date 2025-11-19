@@ -47,6 +47,7 @@ export class WordnikInstance extends InstanceBase<ModuleConfig> {
 
 	public async configUpdated(config: ModuleConfig): Promise<void> {
 		this.config = config
+		process.title = this.label
 		this.statusManager.updateStatus(InstanceStatus.Connecting)
 		this.setupClient()
 		this.initalQueries().catch(() => {})
@@ -74,7 +75,7 @@ export class WordnikInstance extends InstanceBase<ModuleConfig> {
 					})
 					.catch((error) => this.handleError(error))
 			},
-			{ priority: 1 },
+			{ priority: 1, signal: this.#controller.signal },
 		)
 	}
 

@@ -1,6 +1,6 @@
 {
 	"name": "wordnik-api",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "dist/main.js",
 	"type": "module",
 	"scripts": {
@@ -23,24 +23,23 @@
 		"yarn": "^4"
 	},
 	"dependencies": {
-		"@companion-module/base": "~1.12.1",
-		"axios": "^1.12.0",
+		"@companion-module/base": "~1.13.4",
+		"axios": "^1.13.2",
+		"es-toolkit": "^1.42.0",
 		"flat": "^6.0.1",
-		"lodash": "^4.17.21",
-		"p-queue": "^8.1.0",
-		"zod": "^4.0.17"
+		"p-queue": "^9.0.1",
+		"zod": "^4.1.12"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^2.3.0",
-		"@types/lodash": "^4.17.20",
-		"@types/node": "^22.17.2",
-		"eslint": "^9.33.0",
+		"@companion-module/tools": "^2.4.2",
+		"@types/node": "^22.19.1",
+		"eslint": "^9.39.1",
 		"husky": "^9.1.7",
-		"lint-staged": "^16.1.5",
+		"lint-staged": "^16.2.6",
 		"prettier": "^3.6.2",
-		"rimraf": "^6.0.1",
-		"typescript": "~5.9.2",
-		"typescript-eslint": "^8.39.1"
+		"rimraf": "^6.1.0",
+		"typescript": "~5.9.3",
+		"typescript-eslint": "^8.47.0"
 	},
 	"prettier": "@companion-module/tools/.prettierrc.json",
 	"lint-staged": {
@@ -51,5 +50,5 @@
 			"yarn lint:raw --fix"
 		]
 	},
-	"packageManager": "yarn@4.9.2"
+	"packageManager": "yarn@4.11.0"
 }
