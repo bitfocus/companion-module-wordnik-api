@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"@companion-module/base": "~1.13.4",
-		"axios": "^1.13.2",
+		"axios": "^1.13.5",
 		"es-toolkit": "^1.42.0",
 		"flat": "^6.0.1",
 		"p-queue": "^9.0.1",
